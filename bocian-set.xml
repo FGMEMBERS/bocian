@@ -77,6 +77,12 @@
 			</config>
 		</view>
 
+		<view n="6">
+			<config>
+				<target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+			</config>
+		</view>
+
 		<help>
 			<title>Bocian</title>
 			<key>
