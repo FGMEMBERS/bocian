@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-
 	<sim>
-		<description>SGS233 with dummy yasim config</description>
-		<author>D. Culp, Captain Slug (3D), (FDM: AJ MacLeod, Maik Justus)</author>
+		<description>Bocian 1E</description>
+		<author>AJ MacLeod</author>
 		<status>alpha</status>
 
 		<flight-model>yasim</flight-model>
-		<aero>bocian</aero>
+		<aero>bocian-yasim</aero>
 
 		<startup>
-			<splash-texture>Aircraft/sopwithCamel/splash.rgb</splash-texture>
+			<splash-texture>Aircraft/bocian/splash1.rgb</splash-texture>
 		</startup>
 
 		<sound>
@@ -22,69 +21,63 @@
 		<allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
 
 		<model>
-			<!--<path>Aircraft/Bocian/Models/bocian-model.xml</path>-->
-			<path>Aircraft/sgs233/Models/sgs233.ac</path>
+			<path>Aircraft/bocian/Models/bocian-model.xml</path>
 		</model>
 
-		<panel>
-			<path>Aircraft/sgs233/Panels/glider-panel.xml</path>
-			<visibility archive="y">true</visibility>
-			<x-offset>256</x-offset>
-		</panel>
-
-		<!--
 		<ai>
 			<scenario>thermal_demo</scenario>
 		</ai>
--->
+
 		<view n="0">
 		<internal archive="y">true</internal>
 		<config>
 			<pitch-offset-deg>0.0</pitch-offset-deg>
 			<x-offset-m archive="y">0.0</x-offset-m> <!--Right-->
-			<y-offset-m archive="y">0.13</y-offset-m> <!--Up-->
-			<z-offset-m archive="y">-1.04</z-offset-m> <!--Back-->
+			<y-offset-m archive="y">0.75</y-offset-m> <!--Up-->
+			<z-offset-m archive="y">1.40</z-offset-m> <!--Back-->
 			</config>
 		</view>
 
 		<view n="1">
 			<config>
-				<target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">2.8</target-z-offset-m>
 			</config>
 		</view>
 
 		<view n="2">
 			<config>
-				<target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">2.8</target-z-offset-m>
 			</config>
 		</view>
 
 		<view n="3">
 			<config>
-				<target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">2.8</target-z-offset-m>
 			</config>
 		</view>
 
 		<view n="4">
 			<config>
-				<target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">2.8</target-z-offset-m>
 			</config>
 		</view>
 
 		<view n="5">
 			<config>
-				<target-y-offset-m archive="y" type="double">0.3</target-y-offset-m>
-			</config>
-		</view>
-
-		<view n="6">
-			<config>
-				<target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">2.8</target-z-offset-m>
 			</config>
 		</view>
 
 		<help>
 			<title>Bocian</title>
+			<line>Vs = 32 knots</line>
+			<line>VNE = 108 knots</line>
+			<line>Max Aerotow Speed = 75 knots</line>
+			<line>Max Winch Speed = 62 knots</line>
+			<key>
+				<name>throttle</name>
+				<desc>control airbrakes (full throttle=full airbrakes)</desc>
+			</key>
 			<key>
 				<name>Ctrl-w</name>
 				<desc>Place Winch 1000m in front of aircraft (on ground)</desc>
@@ -109,11 +102,12 @@
 				<name>o</name>
 				<desc>locks aerotow-hook</desc>
 			</key>
+
 		</help>
 		<hitches>
-			<!-- make sure some properties do exist, when the list for multiplayer transfere is defined-->
+			<!-- make sure some properties do exist, when the list for multiplayer transfer is defined-->
 			<!-- they need to be in the same value, as they are initilized in the FDM, to get the same values after reset
-				    should fix this somehow-->
+				   should fix this somehow-->
 			<aerotow>
 				<tow>
 					<length type="float">60</length>
@@ -135,8 +129,8 @@
 				<is-slave type="bool">false</is-slave>
 			</aerotow>
 		</hitches>
-
 	</sim>
+
 	<controls>
 		<winch>
 			<place type="bool">false</place>
@@ -225,5 +219,4 @@
 			</key>
 		</keyboard>
 	</input>
-
 </PropertyList>
