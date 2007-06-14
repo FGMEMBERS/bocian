@@ -120,6 +120,48 @@
 			<z-m>0.0226275</z-m>
 		</center>
 	</animation>
+	<!-- Winch hook release handle -->
+	<animation>
+		<type>pick</type>
+		<object-name>winch_hook_release_handle_front</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>/sim/hitches/winch/open</property>
+				<value type="bool">true</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>/sim/model/bocian/winch-hook-pos</property>
+				<value type="int">1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command></command>
+					<property>/sim/hitches/winch/open</property>
+					<value type="bool">false</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>/sim/model/bocian/winch-hook-pos</property>
+				<value type="int">0</value>
+			</binding>
+			</mod-up>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>winch_hook_release_handle_front</object-name>
+		<property>/sim/model/bocian/winch-hook-pos</property>
+		<factor>0.03</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 
 	<!-- Rudder -->
 	<animation>
