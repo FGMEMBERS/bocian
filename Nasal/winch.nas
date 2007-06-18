@@ -14,7 +14,7 @@ placeWinchModel = func {
 	posZ = getprop("sim/hitches/winch/winch/global-pos-z");
 
 	var g = geo.Coord.new().set_xyz(posX, posY, posZ);
-	geo.put_model("Models/Airport/supacat_winch.ac", g.lon(), g.lat());
+	geo.put_model("Models/Airport/supacat_winch.ac", g.lat(), g.lon());
 
 	setprop("/controls/winch/place", "false");
 
