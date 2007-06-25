@@ -4,10 +4,10 @@
 
  <fx>
 
-  <tire-rumble>
-   <name>tire-rumble</name>
+  <tyre-rumble>
+   <name>tyre-rumble</name>
    <mode>looped</mode>
-   <path>Sounds/rumble.wav</path>
+   <path>Aircraft/bocian/Sounds/ground_roll3.wav</path>
    <condition>
     <or>
      <property>/gear/gear[0]/wow</property>
@@ -16,11 +16,10 @@
     </or>
    </condition>
    <volume>
-    <property>velocities/airspeed-kt</property>
-    <factor>0.004</factor>
-    <max>0.3</max>
+    <property>velocities/groundspeed-kt</property>
+    <factor>0.05</factor>
    </volume>
-  </tire-rumble>
+  </tyre-rumble>
 
   <wind>
    <name>wind</name>
@@ -83,6 +82,74 @@
     <factor>1.0</factor>
    </volume>
   </speedbrake>
+
+  <winch_tow>
+   <name>winch_tow</name>
+   <mode>looped</mode>
+   <path>Aircraft/bocian/Sounds/winch_tow.wav</path>
+   <condition>
+    <not>
+     <property>sim/hitches/winch/open</property>
+    </not>
+   </condition>
+   <volume>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+    <max>1</max>
+   </volume>
+  </winch_tow>
+
+  <cable_release>
+   <name>cable_release</name>
+   <mode>once</mode>
+   <path>Aircraft/bocian/Sounds/winch_release.wav</path>
+   <condition>
+    <property>sim/hitches/winch/open</property>
+   </condition>
+  </cable_release>
+
+  <whoosh-positive>
+   <name>whoosh-positive</name>
+   <mode>once</mode>
+   <path>Aircraft/bocian/Sounds/whoosh.wav</path>
+   <condition>
+    <greater-than>
+     <property>orientation/pitch-rate-degps</property>
+     <value>15</value>
+    </greater-than>
+   </condition>
+   <volume>
+    <property>orientation/pitch-rate-degps</property>
+    <factor>0.01</factor>
+    <max>1</max>
+   </volume>
+  </whoosh-positive>
+
+  <whoosh-negative>
+   <name>whoosh-negative</name>
+   <mode>once</mode>
+   <path>Aircraft/bocian/Sounds/whoosh.wav</path>
+   <condition>
+    <less-than>
+     <property>orientation/pitch-rate-degps</property>
+     <value>-15</value>
+    </less-than>
+   </condition>
+   <volume>
+    <property>orientation/pitch-rate-degps</property>
+    <factor>-0.01</factor>
+    <max>1</max>
+   </volume>
+  </whoosh-negative>
+
+  <cable_release>
+   <name>cable_release</name>
+   <mode>once</mode>
+   <path>Aircraft/bocian/Sounds/winch_release.wav</path>
+   <condition>
+    <property>sim/hitches/winch/open</property>
+   </condition>
+  </cable_release>
 
 </fx>
  
