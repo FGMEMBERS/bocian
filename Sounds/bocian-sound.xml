@@ -46,27 +46,6 @@
    </pitch>
   </wind>
 
-  <buffet>
-   <name>alpha-buffet</name>
-   <mode>looped</mode>
-   <condition>
-    <greater-than>
-     <property>/fdm/jsbsim/aero/alpha-rad[0]</property>
-     <value>0.09</value>
-    </greater-than>
-   </condition>
-   <path>Sounds/rumble.wav</path>
-   <volume>
-    <property>/fdm/jsbsim/aero/alpha-rad[0]</property>
-    <factor>15.0</factor>
-    <max>1.0</max>
-   </volume>
-   <pitch>
-    <property>/fdm/jsbsim/aero/alpha-rad[0]</property>
-    <factor>0.1</factor>
-   </pitch>
-  </buffet>
-
   <speedbrake>
    <name>Speedbrake</name>
    <mode>looped</mode>
@@ -142,15 +121,28 @@
    </volume>
   </whoosh-negative>
 
-  <cable_release>
-   <name>cable_release</name>
-   <mode>once</mode>
-   <path>Aircraft/bocian/Sounds/winch_release.wav</path>
+  <variometer>
+   <name>variometer</name>
+   <mode>looped</mode>
+   <path>Aircraft/bocian/Sounds/vario.wav</path>
    <condition>
-    <property>sim/hitches/winch/open</property>
+    <greater-than>
+     <property>velocities/vertical-speed-fps</property>
+     <value>0.01</value>
+    </greater-than>
+    <property>instrumentation/variometer/switch</property>
    </condition>
-  </cable_release>
-
-</fx>
+   <pitch>
+    <property>velocities/vertical-speed-fps</property>
+    <factor>0.125</factor>
+    <offset>1.0</offset>
+   </pitch>
+   <volume>
+    <property>instrumentation/variometer/volume</property>
+    <factor>1</factor>
+    <offset>0.0</offset>
+   </volume>
+  </variometer>
+ </fx>
  
 </PropertyList>

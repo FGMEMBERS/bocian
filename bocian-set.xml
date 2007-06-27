@@ -24,6 +24,22 @@
 			<path>Aircraft/bocian/Models/bocian-model.xml</path>
 		</model>
 
+		<menubar>
+			<default>
+				<menu n="10">
+					<label>Bocian</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Variometer</label>
+						<binding>
+							<command>nasal</command>
+							<script>bocian.variometer.toggle()</script>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+
 		<ai>
 			<scenario>thermal_demo</scenario>
 		</ai>
@@ -88,7 +104,7 @@
 			</key>
 			<key>
 				<name>W</name>
-				<desc>Opens winch-hook. For winch start: press Ctrl-W, press w to start winching, W for tow release</desc>
+				<desc>Opens winch-hook</desc>
 			</key>
 			<key>
 				<name>Ctrl-o</name>
@@ -221,5 +237,13 @@
 			<file>Aircraft/bocian/Nasal/winch.nas</file>
 		</bocian>
 	</nasal>
+
+	<instrumentation>
+		<variometer>
+			<switch type="bool">0</switch>
+			<volume type="float">0.5</volume>
+			<sensitivity type="float">0.175</sensitivity>
+		</variometer>
+	</instrumentation>
 
 </PropertyList>
