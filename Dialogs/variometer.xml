@@ -67,6 +67,19 @@
 				<object-name>volume</object-name>
 			</binding>
 		</slider>
+		<slider>
+			<name>sensitivity</name>
+			<property>/instrumentation/variometer/sensitivity</property>
+			<legend>Sensitivity</legend>
+			<pref-width>250</pref-width>
+			<live>1</live>
+			<min>0</min>
+			<max>0.5</max>
+			<binding>
+				<command>dialog-apply</command>
+				<object-name>sensitivity</object-name>
+			</binding>
+		</slider>
 	</group>
 	
 	<empty><pref-height>3</pref-height></empty>
