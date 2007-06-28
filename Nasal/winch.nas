@@ -37,6 +37,9 @@ var placeWinchByMouse = func {
 	setprop("/sim/hitches/winch/winch/global-pos-y", w.y());
 	setprop("/sim/hitches/winch/winch/global-pos-z", w.z());
 
+	setprop("/sim/hitches/winch/winch/max-tow-length-m", getprop("/sim/hitches/winch/tow/dist") + 1);
+	setprop("/sim/hitches/winch/tow/length", getprop("/sim/hitches/winch/tow/dist") + 0.1);
+
 	setprop("/sim/hitches/winch/open",0);
 	setprop("/controls/winch/place",0);
 
@@ -50,3 +53,7 @@ controls.applyBrakes = func(v) {
 	setprop("sim/hitches/winch/open",1);
 
 } # End Function
+
+# Variometer dialogue (doesn't really belong here, move later)
+var variometer = gui.Dialog.new("/sim/gui/dialogs/bocian/variometer/dialog",
+        "Aircraft/bocian/Dialogs/variometer.xml");

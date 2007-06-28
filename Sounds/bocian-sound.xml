@@ -137,6 +137,11 @@
     <factor>0.125</factor>
     <offset>1.0</offset>
    </pitch>
+   <pitch>
+    <property>instrumentation/variometer/sensitivity</property>
+    <factor>1.0</factor>
+    <offset>0.0</offset>
+   </pitch>
    <volume>
     <property>instrumentation/variometer/volume</property>
     <factor>1</factor>
