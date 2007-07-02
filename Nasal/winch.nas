@@ -20,32 +20,42 @@ var placeWinchModel = func {
 
 } #End Function
 
+
+
+#Init model counter
 var winchModel = nil;
 
 var placeWinchByMouse = func {
 
-	setprop("/controls/winch/place",1);
+
+	setprop("/controls/winch/open",1);
+	setprop("/sim/hitches/winch/winch/rel-speed",0);
 	var w = geo.click_position();
 	var ac = geo.aircraft_position();
 
 	if (winchModel != nil)
 		winchModel.getParent().removeChild(winchModel.getName(), winchModel.getIndex());
 
-	winchModel = geo.put_model("Models/Airport/supacat_winch.ac", w.lat(), w.lon(), (w.alt()+0.81), (ac.course_to(w) + 180.0 ));
+	winchModel = geo.put_model("Models/Airport/supacat_winch.xml", w.lat(), w.lon(), (w.alt()+0.81), (w.course_to(ac) ));
 
 	setprop("/sim/hitches/winch/winch/global-pos-x", w.x());
 	setprop("/sim/hitches/winch/winch/global-pos-y", w.y());
 	setprop("/sim/hitches/winch/winch/global-pos-z", w.z());
+	
+	settimer(placeWinchByMousePart2,0.1);
+
+} #End Function
+
+setlistener("/sim/signals/click",placeWinchByMouse);
+
+var placeWinchByMousePart2 = func {
 
 	setprop("/sim/hitches/winch/winch/max-tow-length-m", getprop("/sim/hitches/winch/tow/dist") + 1);
 	setprop("/sim/hitches/winch/tow/length", getprop("/sim/hitches/winch/tow/dist") + 0.1);
 
 	setprop("/sim/hitches/winch/open",0);
-	setprop("/controls/winch/place",0);
 
 } #End Function
-
-setlistener("/sim/signals/click",placeWinchByMouse);
 
 controls.applyBrakes = func(v) {
 
