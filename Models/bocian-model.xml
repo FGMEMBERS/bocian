@@ -12,6 +12,18 @@
 		<pitch-deg>0</pitch-deg>
 	</offsets>
 
+	<!-- Yaw String
+	<model>
+		<path>Aircraft/bocian/Models/yawstring.xml</path>
+		<offsets>
+			<x-m>0.5267</x-m>
+			<y-m>0</y-m>
+			<z-m>0.53</z-m>
+			<pitch-deg>-30</pitch-deg>
+		</offsets>
+	</model>
+	-->
+
 	<!-- Instruments -->
 	<model>
 		<path>Aircraft/bocian/Models/turn.xml</path>
@@ -67,6 +79,14 @@
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 	</model>
+	<model>
+		<path>Aircraft/bocian/Models/panel.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>
 
 	<!-- Cockpit levers etc -->
 	
@@ -118,6 +138,39 @@
 			<x-m>1.04699</x-m>
 			<y-m>-0.226447</y-m>
 			<z-m>0.0226275</z-m>
+		</center>
+	</animation>
+	<!-- Rudder Pedals -->
+	<animation>
+		<object-name>rudder_pedal_left</object-name>
+		<property>controls/flight/rudder</property>
+		<type>rotate</type>
+		<factor>20</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.527656</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.105378</z-m>
+		</center>
+	</animation>
+	<animation>
+		<object-name>rudder_pedal_right</object-name>
+		<property>controls/flight/rudder</property>
+		<type>rotate</type>
+		<factor>-20</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.527656</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.105378</z-m>
 		</center>
 	</animation>
 	<!-- Winch hook release handle -->
@@ -180,39 +233,35 @@
 			<z-m>0.955421</z-m>
 		</center>
 	</animation>
-	<!-- Right Aileron -->
+
+	<!-- Left Aileron -->
 	<animation>
-		<object-name>aileron_stbd</object-name>
+		<object-name>aileron_port</object-name>
 		<property>controls/flight/aileron</property>
 		<type>rotate</type>
 		<interpolation>
 			<entry>
 				<ind>-1</ind>
-				<dep>30</dep>
+				<dep>-30</dep>
 			</entry>
 			<entry>
 				<ind>1</ind>
-				<dep>-10</dep>
+				<dep>10</dep>
 			</entry>
 		</interpolation>
 		<axis>
-			<x1-m>3.31202</x1-m>
-			<y1-m>4.11678</y1-m>
-			<z1-m>0.574591</z1-m>
-			<x2-m>2.67438</x2-m>
-			<y2-m>9.08038</y2-m>
-			<z2-m>0.9928</z2-m>
+			<x1-m>2.67438</x1-m>
+			<y1-m>-9.08037</y1-m>
+			<z1-m>1.1428</z1-m>
+			<x2-m>3.31202</x2-m>
+			<y2-m>-4.11679</y2-m>
+			<z2-m>0.724591</z2-m>
 		</axis>
-		<center>
-			<x-m>2.99331</x-m>
-			<y-m>6.59768</y-m>
-			<z-m>0.77362</z-m>
-		</center>
 	</animation>
 
-	<!-- Left Aileron -->
+	<!-- Right Aileron -->
 	<animation>
-		<object-name>aileron_port</object-name>
+		<object-name>aileron_stbd</object-name>
 		<property>controls/flight/aileron</property>
 		<type>rotate</type>
 		<interpolation>
@@ -227,22 +276,39 @@
 		</interpolation>
 		<axis>
 			<x1-m>3.31202</x1-m>
-			<y1-m>-4.11678</y1-m>
-			<z1-m>0.574591</z1-m>
+			<y1-m>4.11678</y1-m>
+			<z1-m>0.724591</z1-m>
 			<x2-m>2.67438</x2-m>
-			<y2-m>-9.08038</y2-m>
-			<z2-m>0.9928</z2-m>
+			<y2-m>9.08038</y2-m>
+			<z2-m>1.1428</z2-m>
 		</axis>
-		<center>
-			<x-m>2.99331</x-m>
-			<y-m>-6.59768</y-m>
-			<z-m>0.77362</z-m>
-		</center>
 	</animation>
 
 	<!-- Elevators -->
 	<animation>
 		<object-name>elevator_port</object-name>
+		<property>controls/flight/elevator</property>
+		<type>rotate</type>
+		<interpolation>
+			<entry>
+				<ind>-1</ind>
+				<dep>-22</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>30</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>6.51528</x1-m>
+			<y1-m>-1.82716</y1-m>
+			<z1-m>0.590589</z1-m>
+			<x2-m>6.6763</x2-m>
+			<y2-m>-0.093046</y2-m>
+			<z2-m>0.58759</z2-m>
+		</axis>
+	</animation>
+	<animation>
 		<object-name>elevator_stbd</object-name>
 		<property>controls/flight/elevator</property>
 		<type>rotate</type>
@@ -256,15 +322,13 @@
 				<dep>30</dep>
 			</entry>
 		</interpolation>
-		<center>
-			<x-m>6.51528</x-m>
-			<y-m>0</y-m>
-			<z-m>0.590589</z-m>
-		</center>
 		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
+			<x1-m>6.6763</x1-m>
+			<y1-m>0.093051</y1-m>
+			<z1-m>0.58759</z1-m>
+			<x2-m>6.51528</x2-m>
+			<y2-m>1.82716</y2-m>
+			<z2-m>0.590589</z2-m>
 		</axis>
 	</animation>
 
@@ -297,6 +361,12 @@
 			</greater-than>
 		</condition>
 	</animation>
+	<!-- Temporarily hide ugly WIP -->
+	<animation>
+		<type>select</type>
+		<object-name>canopy_frame</object-name>
+		<object-name>line</object-name>
+	</animation>
 
 	<!-- *** LoD for the whole model *** -->
 	<animation>
@@ -304,5 +374,6 @@
 		<min-m>0</min-m>
 		<max-m>10000</max-m>
 	</animation>
+
 
 </PropertyList>
