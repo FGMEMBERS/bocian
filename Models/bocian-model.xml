@@ -12,7 +12,7 @@
 		<pitch-deg>0</pitch-deg>
 	</offsets>
 
-	<!-- Yaw String
+	<!-- Yaw String -->
 	<model>
 		<path>Aircraft/bocian/Models/yawstring.xml</path>
 		<offsets>
@@ -22,7 +22,6 @@
 			<pitch-deg>-30</pitch-deg>
 		</offsets>
 	</model>
-	-->
 
 	<!-- Instruments -->
 	<model>
