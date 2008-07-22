@@ -21,6 +21,24 @@
    </volume>
   </tyre-rumble>
 
+  <flying-rumble>
+   <name>flying-rumble</name>
+   <mode>looped</mode>
+   <path>Aircraft/bocian/Sounds/flying.wav</path>
+   <property>velocities/airspeed-kt</property>
+   <volume>
+     <property>velocities/airspeed-kt</property>
+     <factor>0.01</factor>
+     <max>1</max>
+   </volume>
+   <pitch>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.001</factor>
+    <offset>1</offset>
+    <max>1.0</max>
+   </pitch>
+  </flying-rumble>
+
   <wind>
    <name>wind</name>
    <mode>looped</mode>
@@ -34,10 +52,10 @@
     <max>1.0</max>
    </volume>
    <volume>
-     <property>velocities/airspeed-kt</property>
-     <factor>0.0015</factor>
-     <min>0.03</min>
-     <max>0.25</max>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.0015</factor>
+    <min>0.03</min>
+    <max>0.25</max>
    </volume>
    <pitch>
     <property>velocities/airspeed-kt</property>
@@ -52,13 +70,17 @@
    <path>Sounds/rumble.wav</path>
    <condition>
     <greater-than>
-     <property>velocities/airspeed-kt</property>
-     <value>50.0</value>
+     <property>surface-positions/speedbrake-pos-norm</property>
+     <value>0.1</value>
     </greater-than>
    </condition>
    <volume>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.05</factor>
+   </volume>
+   <volume>
     <property>surface-positions/speedbrake-pos-norm</property>
-    <factor>1.0</factor>
+    <factor>0.2</factor>
    </volume>
   </speedbrake>
 
@@ -67,6 +89,10 @@
    <mode>looped</mode>
    <path>Aircraft/bocian/Sounds/winch_tow.wav</path>
    <condition>
+    <greater-than>
+      <property>gear/gear/rollspeed-ms</property>
+      <value>0.2</value>
+    </greater-than>
     <not>
      <property>sim/hitches/winch/open</property>
     </not>
