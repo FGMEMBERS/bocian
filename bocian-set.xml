@@ -234,6 +234,7 @@
 
 	<nasal>
 		<bocian>
+			<file>Aircraft/bocian/Nasal/vario.nas</file>
 			<file>Aircraft/bocian/Nasal/winch.nas</file>
 			<file>Aircraft/bocian/Nasal/yawstring.nas</file>
 		</bocian>

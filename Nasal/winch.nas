@@ -63,7 +63,3 @@ controls.applyBrakes = func(v) {
 	setprop("sim/hitches/winch/open",1);
 
 } # End Function
-
-# Variometer dialogue (doesn't really belong here, move later)
-var variometer = gui.Dialog.new("/sim/gui/dialogs/bocian/variometer/dialog",
-        "Aircraft/bocian/Dialogs/variometer.xml");

@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 
-<!-- Airspeed indicator -->
-
 <PropertyList>
 
 	<path>yawstring.ac</path>
@@ -11,6 +9,7 @@
 		<type>rotate</type>
 		<object-name>string</object-name>
 		<property>instrumentation/yawstring</property>
+		<factor>4</factor>
 		<center>
 			<x-m>-0.061937</x-m>
 			<y-m>0.0002164490</y-m>
@@ -19,7 +18,7 @@
 		<axis>
 			<x>0</x>
 			<y>0</y>
-			<z>-1</z>
+			<z>1</z>
 		</axis>
 	</animation>
 	<!-- *** LoD *** -->

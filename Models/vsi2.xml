@@ -10,15 +10,14 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>
-		<property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+		<property>instrumentation/variometer/te-reading2-mps</property>
 		<interpolation>
-			<entry><ind>-5905.5</ind><dep>-125</dep></entry>
-			<entry><ind>-1968.5</ind><dep>-80</dep></entry>
-			<entry><ind>-984.25</ind><dep>-52</dep></entry>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>984.25</ind><dep>55</dep></entry>
-			<entry><ind>1968.5</ind><dep>87</dep></entry>
-			<entry><ind>5905.5</ind><dep>135</dep></entry>
+			<entry><ind>-30</ind><dep>-125</dep></entry>
+			<entry><ind>-10</ind><dep>-80</dep></entry>
+			<entry><ind>-5</ind><dep>-52</dep></entry>
+			<entry><ind>5</ind><dep>55</dep></entry>
+			<entry><ind>10</ind><dep>87</dep></entry>
+			<entry><ind>30</ind><dep>135</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>

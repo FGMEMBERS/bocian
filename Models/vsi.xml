@@ -10,11 +10,10 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>vsi-Needle1</object-name>
-		<property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+		<property>instrumentation/variometer/te-reading1-mps</property>
 		<interpolation>
-			<entry><ind>-984</ind><dep>-130</dep></entry>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>984</ind><dep>130</dep></entry>
+			<entry><ind>-5</ind><dep>-130</dep></entry>
+			<entry><ind>5</ind><dep>130</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
