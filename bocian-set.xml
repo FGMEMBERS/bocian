@@ -143,7 +143,15 @@
 				<local-pos-y type="float">0</local-pos-y>
 				<local-pos-z type="float">0</local-pos-z>
 				<is-slave type="bool">false</is-slave>
+				<rope>
+					<rope-diameter-mm type ="float">15</rope-diameter-mm>
+				</rope>
 			</aerotow>
+			<winch>
+				<rope>
+					<rope-diameter-mm type ="float">25</rope-diameter-mm>
+				</rope>
+			</winch>
 		</hitches>
 	</sim>
 
