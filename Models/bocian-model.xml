@@ -1,0 +1,378 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>bocian-gpl.ac</path>
+	<texture-path>Textures</texture-path>
+
+	<offsets>
+		<x-m>0</x-m>
+		<y-m>0</y-m>
+		<z-m>0.1</z-m>
+		<pitch-deg>0</pitch-deg>
+	</offsets>
+
+	<!-- Yaw String -->
+	<model>
+		<path>Aircraft/bocian/Models/yawstring.xml</path>
+		<offsets>
+			<x-m>0.5267</x-m>
+			<y-m>0</y-m>
+			<z-m>0.53</z-m>
+			<pitch-deg>-30</pitch-deg>
+		</offsets>
+	</model>
+
+	<!-- Instruments -->
+	<model>
+		<path>Aircraft/bocian/Models/turn.xml</path>
+		<offsets>
+			<x-m>0.792503</x-m>
+			<y-m>-0.141017</y-m>
+			<z-m>0.453484</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/bocian/Models/asi.xml</path>
+		<offsets>
+			<x-m>0.809916</x-m>
+			<y-m>-0.185</y-m>
+			<z-m>0.378</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/bocian/Models/vsi.xml</path>
+		<offsets>
+			<x-m>0.807062</x-m>
+			<y-m>-0.0945991</y-m>
+			<z-m>0.3792</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/bocian/Models/compass.xml</path>
+		<offsets>
+			<x-m>0.792392</x-m>
+			<y-m>0.0046714</y-m>
+			<z-m>0.384353</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/bocian/Models/vsi2.xml</path>
+		<offsets>
+			<x-m>0.810557</x-m>
+			<y-m>0.0955</y-m>
+			<z-m>0.378064</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/bocian/Models/altimeter.xml</path>
+		<offsets>
+			<x-m>0.81</x-m>
+			<y-m>0.1855</y-m>
+			<z-m>0.38</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/bocian/Models/panel.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>
+
+	<!-- Cockpit levers etc -->
+	
+	<!-- Stick -->
+	<animation>
+		<object-name>stick_front</object-name>
+		<property>controls/flight/aileron</property>
+		<type>rotate</type>
+		<factor>20</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>1.06033</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0252173</z-m>
+		</center>
+	</animation>
+	<animation>
+		<object-name>stick_front</object-name>
+		<property>controls/flight/elevator</property>
+		<type>rotate</type>
+		<factor>20</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>1.06033</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0252173</z-m>
+		</center>
+	</animation>
+	<!-- Airbrake Lever -->
+	<animation>
+		<object-name>airbrake_lever_front</object-name>
+		<property>controls/engines/engine/throttle</property>
+		<type>rotate</type>
+		<factor>30</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>1.04699</x-m>
+			<y-m>-0.226447</y-m>
+			<z-m>0.0226275</z-m>
+		</center>
+	</animation>
+	<!-- Rudder Pedals -->
+	<animation>
+		<object-name>rudder_pedal_left</object-name>
+		<property>controls/flight/rudder</property>
+		<type>rotate</type>
+		<factor>20</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.527656</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.105378</z-m>
+		</center>
+	</animation>
+	<animation>
+		<object-name>rudder_pedal_right</object-name>
+		<property>controls/flight/rudder</property>
+		<type>rotate</type>
+		<factor>-20</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.527656</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.105378</z-m>
+		</center>
+	</animation>
+	<!-- Winch hook release handle -->
+	<animation>
+		<type>pick</type>
+		<object-name>winch_hook_release_handle_front</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>/sim/hitches/winch/open</property>
+				<value type="bool">true</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>/sim/model/bocian/winch-hook-pos</property>
+				<value type="int">1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command></command>
+					<property>/sim/hitches/winch/open</property>
+					<value type="bool">false</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>/sim/model/bocian/winch-hook-pos</property>
+				<value type="int">0</value>
+			</binding>
+			</mod-up>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>winch_hook_release_handle_front</object-name>
+		<property>/sim/model/bocian/winch-hook-pos</property>
+		<factor>0.03</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Rudder -->
+	<animation>
+		<object-name>rudder</object-name>
+		<property>controls/flight/rudder</property>
+		<type>rotate</type>
+		<factor>30</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>7.37129</x-m>
+			<y-m>0</y-m>
+			<z-m>0.955421</z-m>
+		</center>
+	</animation>
+
+	<!-- Left Aileron -->
+	<animation>
+		<object-name>aileron_port</object-name>
+		<property>controls/flight/aileron</property>
+		<type>rotate</type>
+		<interpolation>
+			<entry>
+				<ind>-1</ind>
+				<dep>-30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>10</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>2.67438</x1-m>
+			<y1-m>-9.08037</y1-m>
+			<z1-m>1.1428</z1-m>
+			<x2-m>3.31202</x2-m>
+			<y2-m>-4.11679</y2-m>
+			<z2-m>0.724591</z2-m>
+		</axis>
+	</animation>
+
+	<!-- Right Aileron -->
+	<animation>
+		<object-name>aileron_stbd</object-name>
+		<property>controls/flight/aileron</property>
+		<type>rotate</type>
+		<interpolation>
+			<entry>
+				<ind>-1</ind>
+				<dep>10</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-30</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>3.31202</x1-m>
+			<y1-m>4.11678</y1-m>
+			<z1-m>0.724591</z1-m>
+			<x2-m>2.67438</x2-m>
+			<y2-m>9.08038</y2-m>
+			<z2-m>1.1428</z2-m>
+		</axis>
+	</animation>
+
+	<!-- Elevators -->
+	<animation>
+		<object-name>elevator_port</object-name>
+		<property>controls/flight/elevator</property>
+		<type>rotate</type>
+		<interpolation>
+			<entry>
+				<ind>-1</ind>
+				<dep>-22</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>30</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>6.51528</x1-m>
+			<y1-m>-1.82716</y1-m>
+			<z1-m>0.590589</z1-m>
+			<x2-m>6.6763</x2-m>
+			<y2-m>-0.093046</y2-m>
+			<z2-m>0.58759</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<object-name>elevator_stbd</object-name>
+		<property>controls/flight/elevator</property>
+		<type>rotate</type>
+		<interpolation>
+			<entry>
+				<ind>-1</ind>
+				<dep>-22</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>30</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>6.6763</x1-m>
+			<y1-m>0.093051</y1-m>
+			<z1-m>0.58759</z1-m>
+			<x2-m>6.51528</x2-m>
+			<y2-m>1.82716</y2-m>
+			<z2-m>0.590589</z2-m>
+		</axis>
+	</animation>
+
+	<!-- Wheel -->
+	<animation>
+		<object-name>wheel</object-name>
+		<property>gear/gear/rollspeed-ms</property>
+		<type>spin</type>
+		<factor>34</factor>
+		<center>
+			<x-m>2.42041</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.341329</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Remove Pilot in cockpit view -->
+	<animation>
+		<type>select</type>
+		<object-name>PilotGroup-front</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</greater-than>
+		</condition>
+	</animation>
+	<!-- Temporarily hide ugly WIP -->
+	<animation>
+		<type>select</type>
+		<object-name>canopy_frame</object-name>
+		<object-name>line</object-name>
+	</animation>
+
+	<!-- *** LoD for the whole model *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+
+
+</PropertyList>

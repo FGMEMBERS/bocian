@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<!-- Altimeter -->
+
+<PropertyList>
+
+	<path>altimeter.ac</path>
+	<texture-path>Textures</texture-path>
+
+	<!-- Altimeter Needle -->
+	<animation>
+		<type>rotate</type>
+		<object-name>altimeter_needle_large</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<factor>0.36</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.0011344</y-m>
+			<z-m>0</z-m>
+  		</center> 
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<!-- Altimeter Needle -->
+	<animation>
+		<type>rotate</type>
+		<object-name>altimeter_needle_small</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<factor>0.036</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.0011344</y-m>
+			<z-m>0</z-m>
+  		</center> 
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>30</max-m>
+	</animation> 
+
+</PropertyList>

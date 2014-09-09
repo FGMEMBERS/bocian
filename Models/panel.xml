@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>panel.ac</path>
+	<texture-path>Textures</texture-path>
+
+	<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>30</max-m>
+	</animation>
+
+</PropertyList>
