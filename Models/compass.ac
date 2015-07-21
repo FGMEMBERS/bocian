@@ -60,7 +60,7 @@ kids 4
 OBJECT poly
 name "compass_lens"
 loc -0.792392 -0.384353 0.01167
-texture "/home/aj/flightgear/data/Aircraft/Lightning/Models/comp.rgb"
+texture "comp.png"
 crease 45.000000
 numvert 63
 -0.0100887 0.00615177 0.0100888
@@ -467,7 +467,7 @@ kids 0
 OBJECT poly
 name "compass_lens"
 loc -0.792392 -0.384353 0.01167
-texture "/home/aj/flightgear/data/Aircraft/Lightning/Models/comp.rgb"
+texture "comp.png"
 crease 45.000000
 numvert 63
 0.0114018 -0.00404352 -0.0114019
@@ -874,7 +874,7 @@ kids 0
 OBJECT poly
 name "compass_lens"
 loc -0.792392 -0.384353 0.01167
-texture "/home/aj/flightgear/data/Aircraft/Lightning/Models/comp.rgb"
+texture "comp.png"
 crease 45.000000
 numvert 63
 -0.00481719 -0.00615171 0.0151792
@@ -1281,7 +1281,7 @@ kids 0
 OBJECT poly
 name "compass_lens"
 loc -0.792392 -0.384353 0.01167
-texture "/home/aj/flightgear/data/Aircraft/Lightning/Models/comp.rgb"
+texture "comp.png"
 crease 45.000000
 numvert 63
 0.0111032 -0.00615171 0.0111029
